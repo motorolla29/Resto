@@ -23,14 +23,21 @@
     box-shadow: 0 0 20px rgba(256, 256, 256, 0.1);
     &-title,
     &-price {
-      width: 250px;
+      width: 15vw;
       text-align: center;
       color: #fff;
       font-size: 24px;
     }
+    &-quantity {
+      width: 15vw;
+      margin: 0 2vw;
+      text-align: center;
+      color: #ffffffb3;
+    }
+
     &-img {
       height: 125px;
-      width: 250px;
+      width: 15vw;
       min-width: 125px;
       object-fit: cover;
     }

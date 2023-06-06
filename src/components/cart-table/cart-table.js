@@ -14,9 +14,8 @@ const CartTable = ({ items, deleteFromCart, changeTotalCount }) => {
             <div key={id} className="cart__item">
               <img src={url} className="cart__item-img" alt={title}></img>
               <div className="cart__item-title">{title}</div>
-              <div className="cart__item-price">
-                {price}$ x{quantity}
-              </div>
+              <div className="cart__item-price">{price}$</div>
+              <div className="cart__item-quantity"> x {quantity}</div>
               <div
                 onClick={() => {
                   deleteFromCart(id);
