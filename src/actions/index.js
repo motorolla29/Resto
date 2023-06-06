@@ -25,4 +25,16 @@ const deleteFromCart = (id) => {
   };
 };
 
-export { menuLoaded, menuRequested, addedToCart, deleteFromCart };
+const changeTotalCount = () => {
+  return {
+    type: 'CHANGE_TOTAL_COUNT',
+  };
+};
+
+export {
+  menuLoaded,
+  menuRequested,
+  addedToCart,
+  deleteFromCart,
+  changeTotalCount,
+};
