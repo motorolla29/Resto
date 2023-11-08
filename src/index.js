@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import App from './components/app';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -11,7 +12,9 @@ import './index.scss';
 
 const restoService = new RestoService();
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <Provider store={store}>
     <ErrorBoundry>
       <RestoServiceContext.Provider value={restoService}>
@@ -20,6 +23,5 @@ ReactDOM.render(
         </Router>
       </RestoServiceContext.Provider>
     </ErrorBoundry>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );
